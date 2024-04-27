@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">  
+    <link rel="stylesheet" href="/css/style.css">  
+
+    <!-- Include jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3Q..." crossorigin="anonymous"></script>
+
+    <script type="text/javascript" defer src="/js/script.js"></script>
+</head>
+<body>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out to me via the following channels:</p>
+                <ul>
+                    <li>Email: <a href="mailto:info@chukwuemekaobanya.com">info@chukwuemekaobanya.com</a></li>
+                    <li>Website: <a href="http://chukwuemekaobanya.com">chukwuemekaobanya.com</a></li>
+                    <li>Phone: <a href="tel:+358469669691">+358469669691</a></li>
+                </ul>
+                <p>Whether you have a question, collaboration opportunity, or just want to chat about football, chess, or technology, I'm always open to connecting!</p>
+
+                <!-- Contact Form -->
+                <form action="/submit_contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Script for Event Handling -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Example jQuery code for handling a click event
+            $('.hero-image').click(function() {
+                // Do something when the hero image is clicked
+                alert('Hero image clicked!');
+            });
+        });
+    </script>
+</body>
+</html>
+

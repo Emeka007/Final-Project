@@ -1,0 +1,27 @@
+<div class="author">
+    <h1 class="author__heading">Hei, I am Chukwuemeka Obanya.</h1>
+    <p class="author__body">Software Engineer and a Football Lover.</p>
+  </div>
+
+  <img src="/img/emeka.jpg" alt="person wearing facecap" class="hero-image" width="940" height="548">
+
+  <section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+  
+    <ul class="article-ul">
+      <% data.forEach(post => { %>
+        <li>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>
+            <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  
+  
+    <% if (nextPage !== null) { %>
+      <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>
+   
+</section>
